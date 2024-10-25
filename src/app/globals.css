@@ -16,7 +16,6 @@
   }
 }
 
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -74,11 +73,11 @@
   }
 }
 
-
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
