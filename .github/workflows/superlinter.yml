@@ -27,3 +27,11 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: "main"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Check for linting errors and provide additional output if needed
+      - name: Check for Linting Issues
+        if: failure() # This step runs only if the previous step failed
+        run: |
+          echo "Linting issues detected. Please check the output above for details."
+          # Optionally, exit with an explicit error code if further actions are needed
+          exit 1
