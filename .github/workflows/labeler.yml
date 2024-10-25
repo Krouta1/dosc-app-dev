@@ -16,9 +16,9 @@ jobs:
       pull-requests: write
 
     steps:
-      - uses: actions/labeler@v4
+      - uses: actions/labeler@v5
         with:
-          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          repo-token: '${{ secrets.GITHUB_TOKEN }}'
 
       - name: Check for Labels
         run: |
@@ -31,4 +31,4 @@ jobs:
             exit 1
           fi
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
