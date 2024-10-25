@@ -1,7 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import AppProviders from "./provider";
+import AppProviders from "@/components/provider";
+import Header from "@/components/header/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <AppProviders>{children}</AppProviders>
+        <AppProviders>
+          <div className="h-screen w-full">
+            <header className="sticky top-0 z-50">
+              <Header />
+            </header>
+            <main className="h-full">{children}</main>
+            <footer>footer</footer>
+          </div>
+        </AppProviders>
       </body>
     </html>
   );
