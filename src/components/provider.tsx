@@ -1,8 +1,9 @@
-import { ThemeProvider } from "@/components/theme-provider";
-import React from "react";
+import { ThemeProvider } from '@/components/theme-provider'
+import React from 'react'
+import { SidebarProvider } from './ui/sidebar'
 
 interface AppProvidersProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 const AppProviders = ({ children }: AppProvidersProps) => {
@@ -17,7 +18,7 @@ const AppProviders = ({ children }: AppProvidersProps) => {
         {children}
       </ThemeProvider>
     </>
-  );
-};
+  )
+}
 
-export default AppProviders;
+export default AppProviders
